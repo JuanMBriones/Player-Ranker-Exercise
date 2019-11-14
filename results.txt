@@ -1,0 +1,7 @@
+Jose 1
+Marco 1
+Chuy 0
+Vec 9.2
+Sasa 7.3
+Sebas 6.9
+Alex 7.1
