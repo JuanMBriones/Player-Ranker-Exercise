@@ -3,6 +3,8 @@
 
 using namespace std;
 
+string theFile;
+
 struct Players{
   string name;
   double score;
@@ -14,7 +16,7 @@ class fileManager:fstream{
 public:
    static bool fileChecker() {
     fstream file;
-    file.open("results.txt");
+    file.open(theFile);
     if(file.is_open()) {
         file.close();
         return true;
@@ -40,7 +42,14 @@ public:
   void rankPlayers() {
 
     fstream inputFile;
-    inputFile.open("results.txt");
+    //inputFile.open("results.txt");
+    cout << "Arrastra tu archivo: ";
+    cin >> theFile;
+    //archivo.pop_back();
+    //archivo.erase(archivo.begin());
+    //cout << archivo << "-" << endl;
+    //
+    inputFile.open(theFile);
     vector<Players> players;
 
     if(fileManager::fileChecker()) {
